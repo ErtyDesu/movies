@@ -7,7 +7,9 @@
     <% @movies.each do |movie| %>
       <tr>
         <td >
-                
+          <% if movie.cover.attached? %>
+          <%= link_to (image_tag url_for(movie.cover) ,:class => "w-50") %>
+          <% end %> 
         </td>
         <td class=""><b><%= movie.titolo %>, <%= movie.durata %> minuti, <br> <%= movie.regista %>, <%= movie.attori %>, <%= movie.genere %></b> <br> <%= movie.trama %></td>
         <td><%= link_to 'Modifica', edit_movie_path(movie), class: 'btn btn-primary' %></td>
