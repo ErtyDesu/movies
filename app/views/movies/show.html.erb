@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titolo:</strong>
+  <%= @movie.titolo %>
+</p>
+
+<p>
+  <strong>Regista:</strong>
+  <%= @movie.regista %>
+</p>
+
+<p>
+  <strong>Attori:</strong>
+  <%= @movie.attori %>
+</p>
+
+<p>
+  <strong>Genere:</strong>
+  <%= @movie.genere %>
+</p>
+
+<p>
+  <strong>Trama:</strong>
+  <%= @movie.trama %>
+</p>
+
+<p>
+  <strong>Durata:</strong>
+  <%= @movie.durata %>
+</p>
+
+<%= link_to 'Modifica', edit_movie_path(@movie), class: 'btn btn-primary' %> |
+<%= link_to 'Indietro', movies_path, class: 'btn btn-primary' %>

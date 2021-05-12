@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titolo: MyString
+  regista: MyString
+  attori: MyString
+  genere: MyString
+  trama: MyText
+  durata: 1
+
+two:
+  titolo: MyString
+  regista: MyString
+  attori: MyString
+  genere: MyString
+  trama: MyText
+  durata: 1
