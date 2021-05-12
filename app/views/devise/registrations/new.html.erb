@@ -1,0 +1,31 @@
+<h2>registrati</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> caratteri minimi)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "nuova password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "nuova password" %>
+  </div>
+
+  <br>
+
+  <div class="actions">
+    <%= f.submit "Registrati", class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links"  %>

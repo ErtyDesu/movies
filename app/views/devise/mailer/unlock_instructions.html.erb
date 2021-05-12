@@ -1,0 +1,7 @@
+<p>Ciao <%= @resource.email %>!</p>
+
+<p>Il tuo account è stato bloccato per un elevata quantità di tentativi di log in</p>
+
+<p>Per sbloccarlo clicca qui sotto</p>
+
+<p><%= link_to 'Sblocca il mio account', unlock_url(@resource, unlock_token: @token) %></p>
