@@ -1,33 +1,31 @@
 <p id="notice"><%= notice %></p>
 
+  <% if @movie.cover.attached? %>
+  <%= image_tag url_for(@movie.cover)%>
+  <% end %> 
+  
 <p>
-  <strong>Titolo:</strong>
   <%= @movie.titolo %>
 </p>
 
 <p>
-  <strong>Regista:</strong>
   <%= @movie.regista %>
 </p>
 
 <p>
-  <strong>Attori:</strong>
   <%= @movie.attori %>
 </p>
 
 <p>
-  <strong>Genere:</strong>
   <%= @movie.genere %>
 </p>
 
 <p>
-  <strong>Trama:</strong>
   <%= @movie.trama %>
 </p>
 
 <p>
-  <strong>Durata:</strong>
-  <%= @movie.durata %>
+  <%= @movie.durata %> minuti
 </p>
 
 <%= link_to 'Modifica', edit_movie_path(@movie), class: 'btn btn-primary' %> |
